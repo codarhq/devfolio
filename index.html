@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Mukta:wght@200;300;400;500;600;700;800&family=Nunito:wght@200;300;400;500;600;700;800&family=Oxygen:wght@300;400;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Devfolio</title>
+</head>
+<body>
+    <header class="container">
+        <div class="main-header">
+            <div class="logo" data-aos="fade" data-aos-duration="2000" data-aos-delay="100">
+                <h2>Devfolio</h2>
+            </div>
+
+             <nav class="navbar" data-aos="fade"   data-aos-duration="2000" data-aos-delay="100"
+             >
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Work</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+             </nav>
+
+             <!-- Hidden navbar -->
+
+             <nav class="hidden-navbar">
+                  <div class="close">
+                    <i class="fa-solid fa-x" id="close"></i>
+                  </div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Work</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li> 
+                </ul>
+             </nav>
+
+             <div class="hidden-menu">
+                <i class="fa-solid fa-bars" id="open"></i>
+             </div>
+        </div>
+
+        <div class="hero-section" data-aos="fade-up"   data-aos-duration="2000" data-aos-delay="100">
+            <h1>I am <span class="name">Mark Phillips</span></h1>
+            <p>Web Developer | Graphic Designer | Content Creator</p>
+        </div>
+    </header>
+
+    <!-- header end -->
+
+    <!-- about section begin -->
+    <section class="about-section">
+        <div class="about-container">
+            <div class="profile">
+                <div class="main-profile">
+                    <div class="profile-img">
+                        <img src="img/testimonial-2.jpg" alt="">
+                    </div>
+                    <div class="profile-id">
+                        <p><strong>Name:</strong> Mark Phillips</p>
+                        <p><strong>Profile:</strong> Web Developer</p>
+                        <p><strong>Email:</strong> random@gmail.com</p>
+                        <p><strong>Phone:</strong> (+234) 745 8990 5555</p>
+                    </div>
+                </div>
+
+                <div class="skills">
+                    <h3>Skills</h3>
+                    <div class="level">
+                        <p>HTML <span>85%</span></p>
+                        <progress max="100" value="85"></progress>
+                    </div>
+                    <div class="level">
+                        <p>CSS3 <span>75%</span></p>
+                        <progress max="100" value="75"></progress>
+                    </div>
+                    <div class="level">
+                        <p>JavaScript <span>90%</span></p>
+                        <progress max="100" value="90"></progress>
+                    </div>
+                    <div class="level">
+                        <p>PHP <span>50%</span></p>
+                        <progress max="100" value="50"></progress>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-text">
+                <h2>About Me</h2>
+                <div class="main-text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est odit dolor amet, fugiat doloremque ipsa voluptate corrupti sunt animi nobis suscipit saepe natus, autem alias molestiae ipsam libero tempora? Incidunt?</p>
+                    <br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus vero rerum ipsa ex, ducimus veniam dolores sed, facere iusto assumenda cum eaque error fugiat doloremque explicabo, voluptatum accusantium officiis autem?</p>
+                    <br>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis consectetur suscipit deleniti molestias optio ullam dignissimos perspiciatis similique autem, architecto iure dolorem incidunt! Ad, deserunt. Perferendis dolorem sit laboriosam. Obcaecati?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="js/index.js"></script>
+</body>
+</html>

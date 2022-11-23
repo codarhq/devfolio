@@ -1,0 +1,336 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Nunito', sans-serif;
+}
+
+.container{
+    max-width: 100%;
+    height: 100vh;
+    padding: 1rem;
+    overflow: hidden;
+    background: url(/img/intro-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: white;
+    position: relative;
+    top: 0;
+}
+
+.container::before{
+    content: '';
+    background-color: rgba(0, 0, 0, 0.35);
+    position: absolute;
+    height: 100vh;
+    padding: 1rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.container .main-header{
+    display: flex;
+    flex-wrap: nowrap;
+    flex: 1 1 auto;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+.main-header .logo{
+    position: relative;
+    left: -10rem;
+    top: 1rem;
+}
+
+.main-header .navbar{
+    position: relative;
+    right: 1rem;
+}
+
+.navbar ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    width: auto;
+}
+
+.navbar ul li a{
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: ease .4s;
+}
+.navbar ul li:nth-child(1) a{
+    border-bottom: 2px solid #fff;
+    padding-bottom: 10px;
+}
+.navbar ul li a:hover{
+    border-bottom: 2px solid #fff;
+    padding-bottom: 10px;
+}
+
+.container .hero-section{
+    position: relative;
+    top: 10rem;
+    text-align: center;
+    margin: auto;
+    /* border: 2px solid #fff; */
+}
+
+.hero-section h1{
+    font-size: 4rem;
+    text-transform: capitalize;
+    letter-spacing: 4px;
+}
+
+.hero-section h1 .name{
+    cursor: pointer;
+    -webkit-transition-delay: .4s;
+    -webkit-transition-timing-function: ease;
+}
+
+.hero-section h1 .name:hover{
+    background: -webkit-linear-gradient(#3f3fef, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-section p{
+    font-size: 20px;
+    letter-spacing: 4px;
+}
+
+/* About section */
+
+.about-section{
+    max-width: 100%;
+    background-color: #f7f7f7;
+    height: 100vh;
+}
+
+.about-section .about-container{
+    background-color: #fff;
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    width: 80%;
+    margin: auto;
+    max-width: 100%;
+    box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.25);
+    padding: 1.5rem 1.5rem 3.5rem 1.5rem;
+    position: relative;
+    top: 5rem;
+}
+
+.about-container .profile{
+    width: 40%;
+    padding: 2rem;
+}
+
+.profile .main-profile{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding: 1.5rem;
+    position: relative;
+    left: -1rem;
+    /* border: 2px solid black; */
+}
+
+.main-profile .profile-img img{
+    border-radius: 5px;
+}
+
+.profile .skills{
+    position: relative;
+    top: 4rem;
+    padding-inline: 1rem;
+    /* border: 2px solid black; */
+    line-height: 2rem;
+}
+
+.skills .level p span{
+    position: relative;
+    left: 50%;
+}
+
+.skills .level progress{
+    width: 350px;
+    border-radius: 10px;
+}
+
+.skills .level progress::-webkit-progress-bar{
+    background-color: #eee;
+    padding: 0;
+    height: 10px;
+}
+
+.skills .level progress::-webkit-progress-value{
+   background-color: #3f3fef;
+}
+
+.about-container .about-text{
+    position: relative;
+    top: 2.8rem;
+    padding: 0.9rem;
+    line-height: 2.2rem;
+    width: 40%;
+}
+
+.about-text h2{
+    font-size: 2.1rem;
+    padding-bottom: 1rem;
+    max-width: 35%;
+    border-bottom: 2px solid #3f3fef;
+}
+
+.hidden-navbar{
+    /* display: block; */
+    background: #3f3fef;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    color: white;
+    padding-block: 0.6rem;
+    padding-inline: 1rem;
+    width: 40vw;
+    z-index: 99;
+    text-align: center;
+}
+
+.hidden-navbar ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    position: relative;
+    top: 6rem;
+}
+
+ .hidden-navbar ul li a{
+    color: #fff;
+    font-size: 1.56rem;
+    text-decoration: none;
+    letter-spacing: 3px;
+    transition: ease .45s;
+ }
+
+ .hidden-navbar ul li:hover a{
+    transform: translateY(-10px) scale(1.5);
+ }
+
+ .hidden-navbar .close{
+    float:right;
+    margin-top: 1.4rem;
+ }
+
+ .close i{
+    font-size: 1.5rem;
+ }
+
+ .hidden-navbar{
+    display: none;
+} 
+
+.hidden-navbar.show{
+    display: block;
+    animation: slide 1s ease-in forwards;
+}
+
+@keyframes slide {
+    0%{
+        transform: translateX(100%);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+}
+
+.hidden-menu{
+    display: none;
+}
+
+/* Responsiveness */
+
+@media (max-width: 900px){
+    .navbar{
+        display: none;
+    }
+
+    .main-header{
+        position: relative;
+    }
+
+    .hidden-menu{
+        display: block;
+        position: absolute;
+        right: 0;
+        float: right;
+        top: 1rem;
+    }
+
+    .hidden-menu i{
+        font-size: 1.8rem;
+        color: #fff;
+    }
+
+    .logo h2{
+        font-size: 2.1rem;
+    }
+}
+
+@media (max-width: 600px){
+    .container{
+        width: 100%;
+    }
+
+    .hidden-menu{
+        right:4rem;
+    }
+
+    .logo{
+        left: 0;
+    }
+
+    .about-section .about-container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .profile .skills{
+        right: 4rem;
+    }
+
+    .about-container .profile{
+        width: 100%;
+    }
+    .about-container .about-text{
+        width: 100%;
+    }
+}
+
+@media (max-width: 450px) {
+    
+}
+  
